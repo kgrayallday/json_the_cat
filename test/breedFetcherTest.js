@@ -25,6 +25,7 @@ describe('fetchBreedDescription', () => {
 
       assert.equal(err, expectedErr);
 
+      // call done when using a function /w callback
       done();
 
 

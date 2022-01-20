@@ -1,5 +1,3 @@
-// breedFetcherTest.js
-
 const { fetchBreedDescription } = require('../breedFetcher');
 const { assert } = require('chai');
 
@@ -18,9 +16,9 @@ describe('fetchBreedDescription', () => {
     });
   });
 
-  it('should return false where an invalid or no beed is passed in', (done) =>  {
+  it('should return an error when invalid or no breed is passed in', (done) =>  {
     fetchBreedDescription('Sibernutz', (err, desc) => {
-
+      // we expect no description for this scenario
       assert.equal(desc, null);
 
       const expectedErr = 'Breed not found';
